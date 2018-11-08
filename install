@@ -1,2 +1,4 @@
 bin/vlmcs usr/bin
 bin/vlmcsd usr/bin
+etc/vlmcsd.ini usr/share/vlmcsd
+etc/vlmcsd.kmd usr/share/vlmcsd
