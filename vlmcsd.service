@@ -4,9 +4,10 @@ After=network.target
 
 [Service]
 Type=simple
-User=nobody
-Group=nogroup
-ExecStart=/usr/bin/vlmcsd -i /etc/vlmcsd/vlmcsd.ini -D
+DynamicUser=yes
+Restart=on-failure
+RestartSec=5s
+ExecStart=/usr/bin/vlmcsd -i /etc/vlmcsd/vlmcsd.ini -j /etc/vlmcsd/vlmcsd.kmd -l syslog -D
 
 [Install]
 WantedBy=multi-user.target
